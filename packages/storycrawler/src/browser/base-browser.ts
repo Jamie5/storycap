@@ -58,6 +58,7 @@ export abstract class BaseBrowser {
       },
     );
     this._page = await this.browser.newPage();
+    await this._page.mouse.move(0, 0);
     await this.setupDebugInput();
     return this;
   }
